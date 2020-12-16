@@ -11,4 +11,7 @@ public interface GoodsService {
     ServiceVO getCode();
 
 
+    Map<String, Object> getListInventory(Integer page, Integer rows, String codeOrName, Integer goodsTypeId);
+
+    Map<String, Object> list(Integer page, Integer rows, String goodsName, Integer goodsTypeId);
 }

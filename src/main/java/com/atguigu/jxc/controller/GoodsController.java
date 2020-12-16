@@ -15,10 +15,16 @@ import java.util.Map;
 /**
  * @description 商品信息Controller
  */
+@RestController
+@RequestMapping("goods")
 public class GoodsController {
 
     @Autowired
     private GoodsService goodsService;
+
+
+
+
 
     /**
      * 分页查询商品库存信息
@@ -32,12 +38,16 @@ public class GoodsController {
 
     /**
      * 分页查询商品信息
-     * @param page 当前页
-     * @param rows 每页显示条数
-     * @param goodsName 商品名称
+     *
+     * @param page        当前页
+     * @param rows        每页显示条数
+     * @param goodsName   商品名称
      * @param goodsTypeId 商品类别ID
      * @return
      */
+    public Map<String, Object> list(Integer page, Integer rows, String goodsName, Integer goodsTypeId) {
+        return goodsService.list(page,  rows, goodsName, goodsTypeId);
+    }
 
 
     /**

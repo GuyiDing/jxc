@@ -14,4 +14,7 @@ public interface GoodsDao {
     String getMaxCode();
 
 
+    List<Goods> getListInventory(@Param("codeOrName") String codeOrName, @Param("goodsTypeId") Integer goodsTypeId);
+
+    List<Goods> list(@Param("goodsName") String goodsName, @Param("goodsTypeId") Integer goodsTypeId);
 }

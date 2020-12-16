@@ -15,4 +15,7 @@ public interface GoodsTypeDao {
     Integer updateGoodsTypeState(GoodsType parentGoodsType);
 
 
+    List<GoodsType> getGoodsType();
+
+    List<GoodsType> getData(Integer pId);
 }
